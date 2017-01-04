@@ -1,0 +1,1 @@
+$('.loader-wr').fadeOut();

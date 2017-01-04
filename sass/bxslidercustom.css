@@ -1,0 +1,179 @@
+/* line 1, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+.bx-slider-container {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1; }
+  /* line 7, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container img {
+    max-width: 100%;
+    display: block; }
+  /* line 10, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-viewport {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0px solid #fff;
+    left: -5px;
+    background: transparent;
+    height: 450px;
+    /*fix other elements on the page moving (on Chrome) */
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+    padding-bottom: 100px; }
+  /* line 25, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-pager, .bx-slider-container .bx-controls-auto {
+    position: absolute;
+    bottom: -60px;
+    width: 100%; }
+  /* line 29, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-loading {
+    min-height: 50px;
+    background: url(img/bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000; }
+  /* line 38, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px; }
+    /* line 45, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-pager .bx-pager-item {
+      display: inline-block;
+      *zoom: 1;
+      *display: inline; }
+  /* line 49, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline; }
+  /* line 53, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-pager.bx-default-pager a {
+    background: transparent;
+    text-indent: -9999px;
+    display: none;
+    width: 10px;
+    height: 10px;
+    margin: 0px 7px;
+    border: 1px solid #19bd9a;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    /* line 64, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-pager.bx-default-pager a:hover, .bx-slider-container .bx-pager.bx-default-pager a.active {
+      background: #19bd9a; }
+  /* line 67, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-prev {
+    left: 50px;
+    background: url(img/controls.png) no-repeat 0 -32px; }
+  /* line 70, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-next {
+    right: 50px;
+    background: url(img/controls.png) no-repeat -43px -32px; }
+  /* line 73, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-prev:hover {
+    background-position: 0 0; }
+  /* line 75, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-next:hover {
+    background-position: -43px 0; }
+  /* line 77, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999; }
+    /* line 86, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-controls-direction a.disabled {
+      display: none; }
+  /* line 88, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-controls-auto {
+    text-align: center; }
+    /* line 90, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-controls-auto .bx-start {
+      display: block;
+      text-indent: -9999px;
+      width: 10px;
+      height: 11px;
+      outline: 0;
+      background: url(img/controls.png) -86px -11px no-repeat;
+      margin: 0 3px; }
+      /* line 98, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+      .bx-slider-container .bx-controls-auto .bx-start:hover, .bx-slider-container .bx-controls-auto .bx-start.active {
+        background-position: -86px 0; }
+    /* line 100, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-controls-auto .bx-stop {
+      display: block;
+      text-indent: -9999px;
+      width: 9px;
+      height: 11px;
+      outline: 0;
+      background: url(img/controls.png) -86px -44px no-repeat;
+      margin: 0 3px; }
+      /* line 108, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+      .bx-slider-container .bx-controls-auto .bx-stop:hover, .bx-slider-container .bx-controls-auto .bx-stop.active {
+        background-position: -86px -33px; }
+  /* line 111, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%; }
+  /* line 114, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px; }
+  /* line 117, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666 \9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%; }
+    /* line 124, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+    .bx-slider-container .bx-caption span {
+      color: #fff;
+      font-family: Arial;
+      display: block;
+      font-size: .85em;
+      padding: 10px; }
+
+@media only screen and (max-width: 1200px) {
+  /* line 133, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-prev {
+    left: 10px;
+    background: url(img/controls.png) no-repeat 0 -32px; }
+  /* line 136, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-next {
+    right: 10px;
+    background: url(img/controls.png) no-repeat -43px -32px; } }
+
+@media only screen and (max-width: 768px) {
+  /* line 142, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-prev {
+    left: 10px;
+    background: url(img/controls.png) no-repeat 0 -32px;
+    display: none; }
+  /* line 146, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-next {
+    right: 10px;
+    background: url(img/controls.png) no-repeat -43px -32px;
+    display: none; }
+  /* line 150, C:/projects/LegoBuild/sass/bxslidercustom.sass */
+  .bx-slider-container .bx-pager.bx-default-pager a {
+    background: transparent;
+    display: block; } }
+
+/*# sourceMappingURL=bxslidercustom.css.map */

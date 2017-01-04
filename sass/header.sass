@@ -1,0 +1,318 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+@import font-awesome.sass
+    
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+  background-color: #fff
+
+@keyframes loader 
+  0%, 10%, 100% 
+    width: 80px
+    height: 80px
+  
+  65% 
+    width: 150px
+    height: 150px
+  
+
+@keyframes loaderBlock 
+  0%, 30% 
+    transform: rotate(0)
+  
+  55% 
+    background-color: #F37272
+  
+  100% 
+    transform: rotate(90deg)
+
+  
+
+@keyframes loaderBlockInverse 
+  0%, 20% 
+    transform: rotate(0)
+  
+  55% 
+    background-color: #F37272
+  
+  100% 
+    transform: rotate(-90deg)
+  
+.loader-wr
+    background-color: #333
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 1
+    z-index: 99999
+    
+.loader 
+  position: absolute
+  width: 80px
+  height: 80px
+  top: 50vh
+  left: 50%
+  transform: translate(-50%, -50%) rotate(45deg) translate3d(0,0,0)
+  animation: loader 1.2s infinite ease-in-out
+
+  span 
+    position: absolute
+    display: block
+    width: 40px
+    height: 40px
+    background-color: #fff343
+    animation: loaderBlock 1.2s infinite ease-in-out both
+
+    &:nth-child(1) 
+      top: 0
+      left: 0
+    
+    &:nth-child(2) 
+      top: 0
+      right: 0
+      animation: loaderBlockInverse 1.2s infinite ease-in-out both
+    
+    &:nth-child(3) 
+      bottom: 0
+      left: 0
+      animation: loaderBlockInverse 1.2s infinite ease-in-out both
+    
+    &:nth-child(4) 
+      bottom: 0
+      right: 0
+    
+
+.start-wrapp
+    width: 100vw
+    height: 100vh
+    background: url(img/tekstura-kirpich-temnyy.jpg)
+    background-size: cover
+    background-position: center
+    
+.header-logo-text
+    color: white
+    font-size: 30px
+    font-family: enigmatic
+    float: left
+    margin-left: 30px
+    margin-top: 5px
+    
+.header-logo
+    width: 61px
+    height: 60px
+    float: left
+
+.header-line1
+    margin-top: 30px
+    
+.menu
+    color: white
+    font-size: 18px
+    font-weight: bold
+    font-family: segoeUi
+    float: left
+    position: absolute
+    left: 50%
+    margin-left: -420px
+    z-index: 10000
+    ul
+        li
+            list-style: none
+            display:  inline-block
+            margin-left: 50px
+            cursor: pointer
+            z-index: 10000
+.tel
+    color: white
+    float: right
+    font-size: 16px
+    font-weight: bold
+    font-family: segoeUi
+    margin-right: 30px
+    letter-spacing: 2px
+    margin-top: 20px
+
+.menu-toggle
+  background-color: transparent
+  position: absolute
+  right: 0
+  height: 40px
+  width: 50px
+  margin: 10px
+  margin-right: 30px
+  border: 0
+  cursor: pointer
+  z-index: 3
+  &:focus
+    outline: 0
+
+.menu-toggle__bar
+  display: block
+  height: 5px
+  width: 40px
+  margin: 0 auto
+  background-color: #fff
+  border-radius: 2px
+  &:before, &:after
+    display: block
+    height: 5px
+    width: 40px
+    margin: 0 auto
+    background-color: #fff
+    border-radius: 2px
+  &:before, &:after
+    content: ""
+    position: relative
+  &:before
+    bottom: 10px
+  &:after
+    top: 5px
+
+
+
+.menu-toggle--active .menu-toggle__bar
+  background-color: transparent
+  transition: background-color .2s ease-in-out .2s
+  &:before
+    // transition: <property> <duration> <timing-function> <delay>;
+    -webkit-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s
+    -o-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s
+    -moz-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s
+    transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s
+  &:after
+    -webkit-transition: top .2s ease-in-out, transform .3s ease-in-out .3s
+    -o-transition: top .2s ease-in-out, transform .3s ease-in-out .3s
+    -moz-transition: top .2s ease-in-out, transform .3s ease-in-out .3s
+    transition: top .2s ease-in-out, transform .3s ease-in-out .3s
+  &:before
+    bottom: 0
+    -webkit-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    transform: rotate(45deg)
+  &:after
+    top: -5px
+    -webkit-transform: rotate(-45deg)
+    -o-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+
+.mob-menu
+    color: white
+    position: absolute
+    width: 600px
+    background: rgba(#333,.8)
+    top: 50%
+    left: 50%
+    margin-left: -300px
+    margin-top: -200px
+    font-family: segoeUi
+    font-weight: bold
+    z-index: 10000
+    opacity: 0
+    transition: all .3s ease
+    display: none
+    
+    ul
+        list-style: none
+        text-align: center
+        margin-bottom: 40px
+        margin-left: -40px
+    
+        li
+            cursor: pointer
+            margin-top: 50px
+            
+.mob-menu.active
+        display: block
+        opacity: 1
+    
+.hidden
+	display: none
+
+.large-header
+  position: absolute
+  width: 100vw
+  height: 100vh
+  left: 0
+  top: 0
+  overflow: hidden
+  background-size: cover
+  background-position: center center
+  z-index: 1
+
+
+.main-title
+  position: absolute
+  margin: 0
+  padding: 0
+  color: #F9F1E9
+  text-align: center
+  top: 50%
+  left: 50%
+  -webkit-transform: translate3d(-50%, -50%, 0)
+  transform: translate3d(-50%, -50%, 0)
+
+.header-text-title
+    color: white
+    font-weight: bold
+    font-size: 30px
+    text-align: center
+    margin-top: 180px
+    
+.header-text
+    color: #fff
+    font-size: 18px
+    text-align: center
+    padding: 30px 30px
+    
+.sendbutton
+    width: 400px
+    height: 75px
+    background: #fff343
+    cursor: pointer
+    position: absolute
+    top: 0%
+    left: 50%
+    margin-left: -200px
+    font-size: 24px
+    color: #333
+    z-index: 2
+    text-align: center
+    padding-top: 18px
+    font-weight: 800
+    border-radius: 5px
+    margin-top: 25px
+    
+.blockwrapp
+    position: absolute
+    width: 610px
+    height: 500px
+    z-index: 2
+    left: 50%
+    top: 50%
+    margin-top: -345px
+    margin-left: -315px
+    transform: scale(1)
+    
+.icobox
+    font-size: 50px
+    color: white
+    position: absolute
+    width: 50px
+    height: 50px
+    bottom: 50px
+    left: 50%
+    margin-left: -25px
+    z-index: 3
+    animation-iteration-count: 3;
+    i
+        cursor: pointer
+
+        
